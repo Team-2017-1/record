@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'总正常上班固定工时： ' + ${fixedhoursSum} + '!'" />
+    <p th:text="'总正常上班实际工时： ' + ${actualhoursSum} + '!'" />
+    <p th:text="'总工作日请假固定工时： ' + ${leaveSum} + '!'" />
+    <p th:text="'总加班实际工时： ' + ${overSum} + '!'" />
+    <p th:text="'总正常上班加班工时（总正常上班实际工时-总正常上班固定工时）： ' + ${nationSum} + '!'" />
+    <p th:text="'剩余可用加班实际工时（总加班实际工时+总正常上班加班工时-总工作日请假固定工时）： ' + ${mainSum} + '!'" />
+</body>
+</html>

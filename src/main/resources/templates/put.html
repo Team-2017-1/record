@@ -1,0 +1,360 @@
+<html>
+<head>
+<title>Blablar.com HTML Form Method Get Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../mystatic/laydate.js"></script>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html {
+	background-color: #E3E3E3;
+	font-size: 14px;
+	color: #000;
+	font-family: '微软雅黑'
+}
+
+h2 {
+	line-height: 30px;
+	font-size: 20px;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+pre {
+	font-family: '微软雅黑'
+}
+
+.box {
+	width: 970px;
+	padding: 10px 20px;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.box a {
+	padding-right: 20px;
+}
+
+.demo1, .demo2, .demo3, .demo4, .demo5, .demo6 {
+	margin: 25px 0;
+}
+
+h3 {
+	margin: 10px 0;
+}
+
+.layinput {
+	height: 22px;
+	line-height: 22px;
+	width: 150px;
+	margin: 0;
+}
+</style>
+
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<body>
+	<b>
+		<div style="padding-left: 580px; padding-top: 30px;">考勤数据入库备份系统</div>
+	</b>
+	<b>
+		日期必填、开始时间和结束时间非必填
+	</b>
+	<form action="http://localhost:8080/control/server/insertRecord"
+		method="post">
+
+		<table style="padding-left: 50px; padding-top: 50px;">
+			<tr>
+				<td><select id="week1" name="week1">
+						<option value="1" selected="selected">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type1" name="type1">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date1" name="date1" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})"/>
+				</td>
+				<td>固定工时：<input id="fixedhours1" name="fixedhours1" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours1" name="actualhours1" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime1" name="starttime1"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime1" name="endtime1"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week2" name="week2">
+						<option value="1">星期一</option>
+						<option value="2" selected="selected">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type2" name="type2">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date2" name="date2" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours2" name="fixedhours2" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours2" name="actualhours2" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime2" name="starttime2"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime2" name="endtime2"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week3" name="week3">
+						<option value="1">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3" selected="selected">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type3" name="type3">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date3" name="date3" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours3" name="fixedhours3" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours3" name="actualhours3" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime3" name="starttime3"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime3" name="endtime3"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week4" name="week4">
+						<option value="1">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4" selected="selected">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type4" name="type4">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date4" name="date4" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours4" name="fixedhours4" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours4" name="actualhours4" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime4" name="starttime4"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime4" name="endtime4"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week5" name="week5">
+						<option value="1">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5" selected="selected">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type5" name="type5">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date5" name="date5" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours5" name="fixedhours5" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours5" name="actualhours5" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime5" name="starttime5"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime5" name="endtime5"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week6" name="week6">
+						<option value="1">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6" selected="selected">星期六</option>
+						<option value="7">星期日</option>
+				</select></td>
+				<td><select id="type6" name="type6">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date6" name="date6" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours6" name="fixedhours6" size="1" value="8" />
+				</td>
+				<td>实际工时：<input id="actualhours6" name="actualhours6" size="1" value="8" />
+				</td>
+				<td>开始时间：<input id="starttime6" name="starttime6"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime6" name="endtime6"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+			<tr>
+				<td><select id="week7" name="week7">
+						<option value="1">星期一</option>
+						<option value="2">星期二</option>
+						<option value="3">星期三</option>
+						<option value="4">星期四</option>
+						<option value="5">星期五</option>
+						<option value="6">星期六</option>
+						<option value="7" selected="selected">星期日</option>
+				</select></td>
+				<td><select id="type7" name="type7">
+						<option value="1">正常上班</option>
+						<option value="2" selected="selected">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+				<td>日期(*)：<input id="date7" name="date7" placeholder="请输入日期"
+					class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+				</td>
+
+				<td>固定工时：<input id="fixedhours7" name="fixedhours7" size="1" value="0" />
+				</td>
+				<td>实际工时：<input id="actualhours7" name="actualhours7" size="1" value="0" />
+				</td>
+				<td>开始时间：<input id="starttime7" name="starttime7"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+				<td>结束时间：<input id="endtime7" name="endtime7"
+					placeholder="请输入日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/>
+				</td>
+
+
+			</tr>
+		</table>
+		<div style="padding-left: 1100px; padding-top: 20px;">
+			<input type="submit" value="提交考勤数据" />
+		</div>
+	</form>
+
+	<!-- 	<div style="padding-left: 1100px;padding-top: 20px;"> -->
+	<!-- 		<input type="submit" value="获取考勤列表" /> -->
+	<!-- 		</div> -->
+	<!-- 		<div style="padding-left: 1100px;padding-top: 20px;"> -->
+	<!-- 		<input type="submit" value="加班总时长" /> -->
+	<!-- 		</div> -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Blablar.com HTML Form Method Get Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../mystatic/laydate.js"></script>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html {
+	background-color: #E3E3E3;
+	font-size: 14px;
+	color: #000;
+	font-family: '微软雅黑'
+}
+
+h2 {
+	line-height: 30px;
+	font-size: 20px;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+pre {
+	font-family: '微软雅黑'
+}
+
+.box {
+	width: 970px;
+	padding: 10px 20px;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.box a {
+	padding-right: 20px;
+}
+
+.demo1, .demo2, .demo3, .demo4, .demo5, .demo6 {
+	margin: 25px 0;
+}
+
+h3 {
+	margin: 10px 0;
+}
+
+.layinput {
+	height: 22px;
+	line-height: 22px;
+	width: 150px;
+	margin: 0;
+}
+</style>
+
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<body>
+	<b>
+		<div style="padding-left: 580px; padding-top: 30px;">考勤数据入库备份系统</div>
+	</b>
+	<form action="http://localhost:8080/v1/control/server/queryRecordList"
+		method="post">
+
+		<table style="padding-left: 50px; padding-top: 50px;">
+			<tr>
+				<td>开始日期：<input id="startDate" name="startDate"
+					placeholder="请输入开始日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})"/></td>
+				<td>结束日期：<input id="endDate" name="endDate"
+					placeholder="请输入结束日期" class="laydate-icon"
+					onClick="laydate({istime: true, format: 'YYYY-MM-DD'})"/></td>
+				<td>类型：<select id="type" name="type">
+						<option value="1">正常上班</option>
+						<option value="2">放假</option>
+						<option value="3">加班</option>
+						<option value="4">调休</option>
+						<option value="5">请假</option>
+						<option value="6">年假</option>
+						<option value="7">其它</option>
+				</select></td>
+			</tr>
+			<tr>
+				
+			</tr>
+			
+		</table>
+		<div style="padding-left: 1100px; padding-top: 20px;">
+			<input type="submit" value="提交考勤数据" />
+		</div>
+	</form>
+
+</body>
+</html>
