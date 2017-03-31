@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,10 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sign.record.dto.Record;
 import com.sign.record.dto.RecordExample;
+import com.sign.record.dto.Test;
 import com.sign.record.service.RecordService;
+import com.sign.record.service.TestService;
 import com.sign.record.utils.DateUtils;
 
-
+@Transactional
 @RestController
 @RequestMapping("/v1/control/server")
 public class RecControl {
@@ -23,9 +26,12 @@ public class RecControl {
 	@Autowired
 	private RecordService recordService;
 	
+	@Autowired
+	private TestService testService;
+	
 
 	@RequestMapping(value = "/insertRecord" , method = RequestMethod.POST)
-	 public String insertRecord(HttpServletRequest request) throws Exception{
+	public String insertRecord(HttpServletRequest request) throws Exception{
 
 		Record r1= new Record();
 		Record r2= new Record();
@@ -194,8 +200,31 @@ public class RecControl {
     	return "success";
 	    }
 	
-	
-	
+	@RequestMapping(value = "/transactionalTest" , method = RequestMethod.POST)
+	public void transactionalTest(HttpServletRequest request) throws Exception{
+		Test t1 = new Test();
+		t1.setComment("333");
+		t1.setInfo("333");
+		t1.setTimed(new Date());
+		int i = testService.insert(t1);
+		System.out.println(i);
+		Test t2 = new Test();
+		t2.setComment("444");
+		t2.setInfo("444");
+		t2.setTimed(new Date());
+		int i2 = testService.insert(t2);
+		System.out.println(i2);
+		
+		Test t3 = new Test();
+		t3.setComment("555");
+		t3.setInfo(null);  //表不为空
+		t3.setTimed(new Date());
+		int i3 = testService.insert(t3);
+		System.out.println(i3);
+		
+		
+		
+	}
 	
 	
 	 

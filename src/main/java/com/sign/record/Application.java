@@ -14,9 +14,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @SpringBootApplication
+@EnableTransactionManagement
 @MapperScan("com.sign.record.repository")
 public class Application{
 	
@@ -52,4 +54,14 @@ public class Application{
 		SpringApplication.run(Application.class, args);
 		logger.info("SpringBoot Start Success");
 	}
+	
+
+    @Bean
+    public Object testBean(PlatformTransactionManager platformTransactionManager){
+        System.out.println(">>>>>>>>>>" + platformTransactionManager.getClass().getName());
+        return new Object();
+    }
+
+    
+    
 }
